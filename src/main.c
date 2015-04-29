@@ -35,6 +35,7 @@ static void update_time() {
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
+  APP_LOG(APP_LOG_LEVEL_INFO, buffer);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
@@ -119,7 +120,11 @@ static void main_window_load(Window *window) {
   // Create time TextLayer
   s_time_layer = text_layer_create(GRect(0, 0, 144, 60));
   text_layer_set_background_color(s_time_layer, GColorClear);
+#ifdef PBL_COLOR
+  text_layer_set_text_color(s_time_layer, GColorDukeBlue);
+#else
   text_layer_set_text_color(s_time_layer, GColorBlack);
+#endif
   
   // Create GFont and apply it to TextLayer
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_GCE_DRUCKSCHRIFT_55));
@@ -134,7 +139,11 @@ static void main_window_load(Window *window) {
   // blabla TextLayer
   s_blabla_layer = text_layer_create(GRect(0, 60, 144, 30));
   text_layer_set_background_color(s_blabla_layer, GColorClear);
+#ifdef PBL_COLOR
+  text_layer_set_text_color(s_blabla_layer, GColorDukeBlue);
+#else
   text_layer_set_text_color(s_blabla_layer, GColorBlack);
+#endif
   s_blabla_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_GCE_DRUCKSCHRIFT_16));
   text_layer_set_font(s_blabla_layer, s_blabla_font);
   text_layer_set_text_alignment(s_blabla_layer, GTextAlignmentCenter);

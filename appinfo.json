@@ -7,7 +7,7 @@
     "capabilities": [
         "location"
     ],
-    "companyName": "pebble2@georg.czedik.net",
+    "companyName": "GCE",
     "longName": "GCE2_1",
     "projectType": "native",
     "resources": {
@@ -29,8 +29,11 @@
             }
         ]
     },
-    "sdkVersion": "2",
+    "sdkVersion": "3",
     "shortName": "GCE2_1",
+    "targetPlatforms": [
+        "basalt"
+    ],
     "uuid": "58dcb6e8-c289-4a54-9c24-d3af3a8a0826",
     "versionCode": 1,
     "versionLabel": "1.0",
