@@ -32,9 +32,11 @@ static void update_time() {
     // Use 12 hour format
     strftime(buffer, sizeof("XX:XX"), "%I:%M", tick_time);
   }
+  APP_LOG(APP_LOG_LEVEL_INFO, buffer);
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
+  APP_LOG(APP_LOG_LEVEL_INFO, "Leave update_time()");
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
