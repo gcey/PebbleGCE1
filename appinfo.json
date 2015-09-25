@@ -7,15 +7,15 @@
     "capabilities": [
         "location"
     ],
-    "companyName": "GCE",
+    "companyName": "pebble2@georg.czedik.net",
     "longName": "GCE2_1",
     "projectType": "native",
     "resources": {
         "media": [
             {
-                "file": "images/Georg_sw.png",
-                "name": "IMAGE_GCE",
-                "type": "png"
+                "file": "fonts/gcedruck.TTF",
+                "name": "FONT_GCE_DRUCKSCHRIFT_55",
+                "type": "font"
             },
             {
                 "file": "fonts/gcedruck.TTF",
@@ -23,19 +23,19 @@
                 "type": "font"
             },
             {
-                "file": "fonts/gcedruck.TTF",
-                "name": "FONT_GCE_DRUCKSCHRIFT_55",
-                "type": "font"
+                "file": "images/Georg_sw.png",
+                "name": "IMAGE_GCE",
+                "type": "png"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "GCE2_1",
     "targetPlatforms": [
+        "aplite",
         "basalt"
     ],
     "uuid": "58dcb6e8-c289-4a54-9c24-d3af3a8a0826",
-    "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
         "watchface": true

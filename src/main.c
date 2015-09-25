@@ -35,7 +35,6 @@ static void update_time() {
 
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
-  APP_LOG(APP_LOG_LEVEL_INFO, buffer);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
@@ -125,7 +124,7 @@ static void main_window_load(Window *window) {
 #else
   text_layer_set_text_color(s_time_layer, GColorBlack);
 #endif
-  
+
   // Create GFont and apply it to TextLayer
   s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_GCE_DRUCKSCHRIFT_55));
   text_layer_set_font(s_time_layer, s_time_font);
@@ -143,7 +142,7 @@ static void main_window_load(Window *window) {
   text_layer_set_text_color(s_blabla_layer, GColorDukeBlue);
 #else
   text_layer_set_text_color(s_blabla_layer, GColorBlack);
-#endif
+#endif  
   s_blabla_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_GCE_DRUCKSCHRIFT_16));
   text_layer_set_font(s_blabla_layer, s_blabla_font);
   text_layer_set_text_alignment(s_blabla_layer, GTextAlignmentCenter);
